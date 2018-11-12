@@ -1,0 +1,229 @@
+.swiper-header{
+  position: relative;
+  .tabs{
+    position: absolute;
+    right: 0;
+    top: 0;
+  }
+  .list{
+    .item{
+      &:hover{
+        background: #e4e4e4!important;
+      }
+      a{
+        color: #333333!important;
+      }
+      ul{
+        li{
+          span{
+            background: #333333!important;
+          }
+        }
+      }
+    }
+  }
+}
+.line-bottom{
+  position: absolute;
+  display: block;
+}
+// 1920
+.news{
+  width: 100%;
+  height: auto;
+  margin-top: 130px;
+  .new-detail{
+    width: 1100px;
+    height: auto;
+    margin: 0 auto;
+    padding-bottom: 150px;
+    h2{
+      font-size: 40px;
+      color: #333333;
+    }
+    .time{
+      font-size: 18px;
+      color: #999999;
+      margin-top: 10px;
+    }
+    img{
+      max-width: 100%;
+      height: auto;
+      display: block;
+      margin:0 auto;
+      margin-top: 50px;
+    }
+    .video{
+      width: 100%;
+      height: auto;
+      margin-top: 50px;
+      position: relative;
+      video{
+        width: 100%;
+        height: auto;
+      }
+      img{
+        width: 80px;
+        height: 80px;
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        margin: -40px 0 0 -40px;
+      }
+    }
+    p{
+      font-size: 22px;
+      color: #333333;
+      line-height: 40px;
+      margin-top: 50px;
+    }
+    .net-work{
+      margin-top: 44px;
+      .title{
+        margin-top: 0;
+      }
+      .address{
+        margin-top: 0px;
+      }
+    }
+    .img-cont{
+      font-size: 18px;
+      color: #666666;
+      margin-top:20px; 
+    }
+  }
+}
+@media (min-width:1366px) and (max-width:1919px) {
+  .news{
+    width: 100%;
+    height: auto;
+    margin-top: 92px;
+    .new-detail{
+      width: 782px;
+      height: auto;
+      margin: 0 auto;
+      padding-bottom: 106px;
+      display: flex;
+      flex-direction: column;
+      h2{
+        font-size: 28px;
+        color: #333333;
+      }
+      .time{
+        font-size: 12px;
+        color: #999999;
+        margin-top: 7px;
+      }
+      img{
+        max-width: 100%;
+        height: auto;
+        margin-top: 35px;
+      }
+      .video{
+        width: 100%;
+        height: auto;
+        margin-top: 35px;
+        position: relative;
+        video{
+          width: 100%;
+          height: auto;
+        }
+        img{
+          width: 80px;
+          height: 80px;
+          position: absolute;
+          top: 50%;
+          left: 50%;
+          margin: -40px 0 0 -40px;
+        }
+      }
+      p{
+        font-size: 15px;
+        color: #333333;
+        line-height: 28px;
+        margin-top: 35px;
+      }
+      .net-work{
+        margin-top: 31px;
+        .title{
+          margin-top: 0;
+        }
+        .address{
+          margin-top: 0px;
+        }
+      }
+      .img-cont{
+        font-size: 13px;
+        color: #666666;
+        margin-top:15px; 
+      }
+    }
+  }
+}
+@media (max-width:1365px) {
+  .news{
+    width: 100%;
+    height: auto;
+    margin-top: 86px;
+    .new-detail{
+      width: 733px;
+      height: auto;
+      margin: 0 auto;
+      padding-bottom: 100px;
+      display: flex;
+      flex-direction: column;
+      h2{
+        font-size: 26px;
+        color: #333333;
+      }
+      .time{
+        font-size: 12px;
+        color: #999999;
+        margin-top: 6px;
+      }
+      img{
+        max-width: 100%;
+        height: auto;
+        margin-top: 33px;
+      }
+      .video{
+        width: 100%;
+        height: auto;
+        margin-top: 33px;
+        position: relative;
+        video{
+          width: 100%;
+          height: auto;
+        }
+        img{
+          width: 80px;
+          height: 80px;
+          position: absolute;
+          top: 50%;
+          left: 50%;
+          margin: -40px 0 0 -40px;
+        }
+      }
+      p{
+        font-size: 15px;
+        color: #333333;
+        line-height: 26px;
+        margin-top: 33px;
+      }
+      .net-work{
+        margin-top: 29px;
+        .title{
+          margin-top: 0;
+        }
+        .address{
+          margin-top: 0px;
+        }
+      }
+      .img-cont{
+        font-size: 13px;
+        color: #666666;
+        margin-top:13px; 
+      }
+    }
+  }
+}

@@ -1,0 +1,818 @@
+html, body {
+  position: relative;
+  height: 100%;
+}
+*{
+  margin: 0;
+  padding: 0;
+}
+.swiper-container {
+  width: 100%;
+  height: 100%;
+  margin-left: auto;
+  margin-right: auto;
+}
+.swiper-wrapper{
+  position: relative;
+}
+.swiper-slide {
+  text-align: center;
+  font-size: 18px;
+  background: #fff;
+  position: relative;
+}
+.swiper-pagination{
+  bottom: 5%;
+} 
+.swiper-pagination-customs{
+  width: 36px;
+  height: 5px;
+  display: inline-block;
+  background: #aeaeae;
+  margin: 0 12px;
+  cursor: pointer;
+}
+.swiper-pagination-customs-active{
+  background: #f61b1b;
+}
+
+@mixin page-h2{
+  h2{
+    font-size: 60px;
+    color: #ffffff;
+    letter-spacing: 6px;
+    font-weight: bold;
+  }
+  .english{
+    font-size: 30px;
+    color: #ffffff;
+    font-weight: 300;
+    margin-top: 22px;
+  }
+}
+@mixin page-line{
+  display: block;
+  height: 2px;
+  width: 50px;
+  background: #e53838;
+}
+
+//第一页
+.swiper-page-one{
+  background: url(../../img/common/product_bg1.png) top center no-repeat;
+  background-size: cover;
+  .section{
+    width: 100%;
+    margin-top: 300px;
+    @include page-h2;
+    .line{
+      @include page-line;
+      margin: 50px auto;
+    }
+    .content{
+      font-size: 34px;
+      color: #ffffff;
+      letter-spacing: 4px;
+      font-weight: 300;
+    }
+  }
+}
+// 第二页
+.swiper-page-two{
+  background: url(../../img/common/product_bg2.png) top center no-repeat;
+  background-size: cover;
+  .section-header{
+    width: 100%;
+    position: absolute;
+    top: 37%;
+    margin-top: -10%;
+    h2{
+      font-size: 50px;
+      color: #ffffff;
+    }
+    .english{
+      font-size: 28px;
+      color: #999999;
+      font-weight: 300;
+      margin-top: 15px;
+    }
+    .line{
+      @include page-line;
+      width: 20px;
+      margin: 10px auto 60px;
+    }
+  }
+  .banner-slide{
+    background: rgba(255,255,255,0);
+    overflow: hidden;
+    .banner-total{
+      width: 100%;
+      position: absolute;
+      top: 56%;
+      margin-top: -10%;
+    }
+    .app-logo{
+      width: 704px;
+      margin-left: 180px;
+      display: flex;
+      flex-direction: column;
+      .item{
+        width: 100%;
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        justify-content: flex-start;
+        margin-bottom: 56px;
+        &:last-child{
+          margin-bottom: 0;
+        }
+        img{
+          width: 108px;
+          height: 108px;
+          margin-left: 70px;
+          cursor: pointer;
+        }
+        .dh{
+          width: 180px;
+          height: 108px;
+          margin: 0;
+        }
+      }
+      .first{
+        position: relative;
+        left: 178px;
+      }
+      .two{
+        position: relative;
+        left: 80px;
+      }
+    }
+  }
+  .head{
+    width: 769px;
+    height: 943px;
+    position: absolute;
+    right: -96px;
+    bottom: -168px;
+    background: url(../../img/common/product-head.png) top center no-repeat;
+    background-size: cover;
+    img{
+      margin-top: 167px;
+      margin-right: 300px;
+      transform-style:preserve-3d; 
+      transform: perspective(700px) rotateZ(-17deg) skew(10deg);
+    }
+    img.especially{
+      margin-top: 108px;
+      margin-right: 337px;
+    }
+    .head-content{
+      width: 220px;
+      height: 200px;
+      transform: rotate(-19deg) skew(9deg);
+      color: #ffffff;
+      position: absolute;
+      top: 270px;
+      left: 30px;
+      margin-left: 180px;
+      h2{
+        font-size: 22px;
+      }
+      p{
+        font-size: 14px;
+        font-weight: 300;
+        text-align: left;
+        color: #fed8d8;
+        margin-top: 10px;
+      }
+    }
+  }
+}
+
+//第三页
+.swiper-page-three{
+  background: url(../../img/common/product_bg3.png) top center no-repeat;
+  background-size: cover;
+  .section-header{
+    width: 100%;
+    position: absolute;
+    top: 35%;
+    margin-top: -10%;
+    h2{
+      font-size: 50px;
+      color: #ffffff;
+    }
+    .english{
+      font-size: 28px;
+      color: #999999;
+      font-weight: 300;
+      margin-top: 15px;
+    }
+    .line{
+      @include page-line;
+      width: 20px;
+      margin: 10px auto 60px;
+    }
+  }
+  .product-slide{
+    background: rgba(255, 255, 255, 0);
+    .product-total{
+      position: absolute;
+      top: 50%;
+      width: 100%;
+      margin-top: -10%;
+    }
+    .pc-logo{
+      width: 1688px;
+      height: 237px;
+      margin: 180px auto 0;
+      position: relative;
+      .pc-logo-bg{
+        position: absolute;
+        left: 0;
+        top: 90px;
+      }
+      .list{
+        width: 100%;
+        height: auto;
+        position: relative;
+        .item{
+          width: 240px;
+          height: 300px;
+          cursor: pointer;
+          a{
+            display: block;
+            width: 100%;
+            height: 100%;
+            text-decoration: none;
+            display: flex;
+            flex-direction: column;
+            justify-content: flex-end;
+            align-items: center;
+          }
+          .produce{
+            display: none;
+            h2{
+              color: #ffffff;
+              font-size: 24px;
+              font-weight: normal;
+              margin-bottom: 10px;
+            }
+            p{
+              font-size:14px;
+              color: #999999; 
+            }
+          }
+          .logo{
+            width: 107px;
+            height: 107px;
+            margin: 24px 0 24px;
+            animation: shangxia 2s ease-in-out infinite alternate;
+            
+          }
+          .arc{
+            width: 30px;
+            height: 30px;
+          }
+          
+        }
+        .item-one{
+          position: absolute;
+          top: -164px;
+          left: 96px;
+        }
+        .item-two{
+          position: absolute;
+          top: -8px;
+          left: 296px;
+        }
+        .item-three{
+          position: absolute;
+          top: -182px;
+          left: 480px;
+        }
+        .item-four{
+          position: absolute;
+          top: 16px;
+          left: 716px;
+        }
+        .item-five{
+          position: absolute;
+          top: -190px;
+          left: 964px;
+        }
+        .item-six{
+          position: absolute;
+          top: 39px;
+          left: 1237px;
+          .logo{
+            width: 135px;
+            height: 56px;
+            margin-bottom: 80px;
+            margin-right: 14px;
+          }
+          .clover{
+            width: 105px;
+            height: 95px;
+          }
+        }
+        .item-seven{
+          position: absolute;
+          top: -176px;
+          left: 1420px;
+          .logo{
+            width: 142px;
+            height: 106px;
+            margin-right: 44px;
+          }
+          .dfysdq{
+            width: 105px;
+            height: 95px;
+            margin-left:35px
+          }
+        }
+      }
+    }
+  }
+}
+@media (min-width:1366px) and (max-width:1919px){
+  @mixin page-h2{
+    h2{
+      font-size: 42px;
+      letter-spacing: 6px;
+    }
+    .english{
+      font-size: 21px;
+      font-weight: 300;
+      margin-top: 14px;
+    }
+  }
+  @mixin page-line{
+    height: 2px;
+    width: 35px;
+  }
+  
+  //第一页
+  .swiper-page-one{
+    .section{
+      width: 100%;
+      margin-top: 260px;
+      @include page-h2;
+      .line{
+        @include page-line;
+        margin: 35px auto;
+      }
+      .content{
+        font-size: 24px;
+        color: #ffffff;
+        letter-spacing: 4px;
+      }
+    }
+  }
+  // 第二页
+  .swiper-page-two{
+    .section-header{
+      width: 100%;
+      h2{
+        font-size: 35px;
+      }
+      .english{
+        font-size: 19px;
+        font-weight: 300;
+        margin-top: 10px;
+      }
+      .line{
+        @include page-line;
+        width: 14px;
+        margin: 10px auto 42px;
+      }
+    }
+    .banner-slide{
+      background: rgba(255,255,255,0);
+      position: relative;
+      overflow: hidden;
+      .app-logo{
+        width: 500px;
+        height: 314px;
+        margin-left: 128px;
+        .item{
+          img{
+            width: 76px;
+            height: 76px;
+            margin-left: 50px;
+          }
+          .dh{
+            width: 128px;
+            height: 76px;
+            margin: 0;
+          }
+        }
+        .first{
+          left: 126px;
+        }
+      }
+    }
+    .head{
+      width: 547px;
+      height: 670px;
+      position: absolute;
+      right: -68px;
+      bottom: -120px;
+      background: url(../../img/common/product-head.png) top center no-repeat;
+      background-size: cover;
+      img{
+        width: 80px;
+        margin-top: 100px;
+        margin-right: 230px;
+        transform: perspective(700px) rotateZ(-16deg) skew(12deg);
+      }
+      img.especially{
+        margin-top: 65px;
+        margin-right: 257px;
+        width:110px;
+        height:110px;
+      }
+      .head-content{
+        width: 150px;
+        height: 200px;
+        color: #ffffff;
+        margin-left: 120px;
+        transform: rotate(-17deg) skew(10deg);
+        top: 170px;
+        h2{
+          font-size: 15px;
+        }
+        p{
+          font-size: 12px;
+          font-weight: 300;
+          text-align: left;
+          color: #fed8d8;
+          margin-top: 10px;
+        }
+      }
+    }
+  }
+  
+  //第三页
+  .swiper-page-three{
+    .section-header{
+      width: 100%;
+      h2{
+        font-size: 35px;
+      }
+      .english{
+        font-size: 19px;
+        font-weight: 300;
+        margin-top: 12px;
+      }
+      .line{
+        @include page-line;
+        width: 14px;
+        margin: 15px auto 42px;
+      }
+    }
+    .product-slide{
+      background: rgba(255, 255, 255, 0);
+      .pc-logo{
+        width: 1200px;
+        height: 168px;
+        margin: 200px auto 0;
+        .pc-logo-bg{
+          position: absolute;
+          left: 0;
+          top: 0;
+          width: 100%;
+        }
+        .list{
+          width: 100%;
+          .item{
+            width: 210px;
+            height: 200px;
+            .produce{
+              display: none;
+              h2{
+                font-size: 17px;
+                margin-bottom: 7px;
+              }
+              p{
+                font-size:12px;
+                color: #999999; 
+              }
+            }
+            .logo{
+              width: 76px;
+              height: 76px;
+              margin: 17px 0 17px;
+            }
+            .arc{
+              width: 22px;
+              height: 22px;
+            }
+            
+          }
+          .item-one{
+            position: absolute;
+            top: -166px;
+            left: 50px;
+          }
+          .item-two{
+            position: absolute;
+            top: -58px;
+            left: 188px;
+          }
+          .item-three{
+            position: absolute;
+            top: -180px;
+            left: 320px;
+          }
+          .item-four{
+            position: absolute;
+            top: -40px;
+            left: 488px;
+          }
+          .item-five{
+            position: absolute;
+            top: -186px;
+            left: 664px;
+          }
+          .item-six{
+            position: absolute;
+            top: -24px;
+            left: 860px;
+            .logo{
+              width: 131px;
+              height: 39px;
+              margin-bottom: 56px;
+              margin-right: 9px;
+            }
+            .clover{
+              width: 95px;
+              height: 85px;
+            }
+          }
+          .item-seven{
+            position: absolute;
+            top: -174px;
+            left: 990px;
+            .logo{
+              width: 101px;
+              height: 75px;
+              margin-right: 38px;
+            }
+            .dfysdq{
+              width: 95px;
+              height: 85px;
+              margin-left:38px
+            }
+          }
+        }
+      }
+    }
+  }
+}
+@media (max-width:1365px){
+  @mixin page-h2{
+    h2{
+      font-size: 40px;
+      letter-spacing: 6px;
+    }
+    .english{
+      font-size: 20px;
+      font-weight: 300;
+      margin-top: 14px;
+    }
+  }
+  @mixin page-line{
+    height: 2px;
+    width: 33px;
+  }
+  
+  //第一页
+  .swiper-page-one{
+    .section{
+      width: 100%;
+      margin-top: 244px;
+      @include page-h2;
+      .line{
+        @include page-line;
+        margin: 33px auto;
+      }
+      .content{
+        font-size: 22px;
+        color: #ffffff;
+        letter-spacing: 4px;
+        font-weight: 300;
+      }
+    }
+  }
+  // 第二页
+  .swiper-page-two{
+    .section-header{
+      width: 100%;
+      h2{
+        font-size: 33px;
+      }
+      .english{
+        font-size: 18px;
+        font-weight: 300;
+        margin-top: 10px;
+      }
+      .line{
+        @include page-line;
+        width: 13px;
+        margin: 6px auto 40px;
+      }
+    }
+    .banner-slide{
+      background: rgba(255,255,255,0);
+      position: relative;
+      overflow: hidden;
+      .app-logo{
+        width: 470px;
+        height: 295px;
+        margin-left: 120px;
+        .item{
+          img{
+            width: 72px;
+            height: 72px;
+            margin-left: 46px;
+          }
+          .dh{
+            width: 120px;
+            height: 72px;
+            margin: 0;
+          }
+        }
+        .first{
+          left: 120px;
+        }
+      }
+    }
+    .head{
+      width: 512px;
+      height: 628px;
+      position: absolute;
+      right: -45px;
+      bottom: -80px;
+      background: url(../../img/common/product-head.png) top center no-repeat;
+      background-size: cover;
+      img{
+        margin-top: 80px;
+        margin-right: 225px;
+        width: 76px;
+        transform: perspective(700px) rotateZ(-16deg) skew(12deg);
+      }
+      img.especially{
+        margin-top: 65px;
+        margin-right: 237px;
+        width:90px;
+        height:90px;
+      }
+      .head-content{
+        width: 150px;
+        height: 150px;
+        color: #ffffff;
+        margin-left: 98px;
+        top:154px;
+        transform: rotate(-17deg)  skew(10deg);
+        h2{
+          font-size: 18px;
+        }
+        p{
+          font-size: 12px;
+          font-weight: 300;
+          text-align: left;
+          color: #fed8d8;
+          margin-top: 6px;
+        }
+      }
+    }
+  }
+  
+  //第三页
+  .swiper-page-three{
+    .section-header{
+      width: 100%;
+      h2{
+        font-size: 33px;
+      }
+      .english{
+        font-size: 18px;
+        font-weight: 300;
+        margin-top: 10px;
+      }
+      .line{
+        @include page-line;
+        width: 13px;
+        margin: 6px auto 40px;
+      }
+    }
+    .product-slide{
+      background: rgba(255, 255, 255, 0);
+      .pc-logo{
+        width: 1120px;
+        height: 150px;
+        margin: 230px auto 0;
+        .pc-logo-bg{
+          position: absolute;
+          left: 0;
+          top: 0;
+          width: 100%;
+        }
+        .list{
+          width: 100%;
+          .item{
+            width: 160px;
+            height: 200px;
+            .produce{
+              display: none;
+              h2{
+                font-size: 16px;
+                margin-bottom: 6px;
+              }
+              p{
+                font-size:12px;
+                color: #999999; 
+              }
+            }
+            .logo{
+              width: 71px;
+              height: 71px;
+              margin: 16px 0;
+            }
+            .arc{
+              width: 20px;
+              height: 20px;
+            }
+            
+          }
+          .item-one{
+            position: absolute;
+            top: -170px;
+            left: 66px;
+          }
+          .item-two{
+            position: absolute;
+            top: -67px;
+            left: 194px;
+          }
+          .item-three{
+            position: absolute;
+            top: -182px;
+            left: 320px;
+          }
+          .item-four{
+            position: absolute;
+            top: -50px;
+            left: 472px;
+          }
+          .item-five{
+            position: absolute;
+            top: -188px;
+            left: 638px;
+          }
+          .item-six{
+            position: absolute;
+            top: -37px;
+            left: 825px;
+            .logo{
+              width: 123px;
+              height: 37px;
+              margin-bottom: 60px;
+              margin-right: 14px;
+            }
+            .clover{
+              width: 85px;
+              height: 75px;
+            }
+          }
+          .item-seven{
+            position: absolute;
+            top: -176px;
+            left: 940px;
+            .logo{
+              width: 94px;
+              height: 70px;
+              margin-right: 30px;
+            }
+            .dfysdq{
+              width: 80px;
+              height: 75px;
+              margin-left:38px
+            }
+          }
+        }
+      }
+    }
+  }
+}
+@keyframes shangxia{
+  from {transform:translateY(10px);}
+  to {transform:translateY(-10px);}
+}
+.footer{
+  position: absolute;
+  left: 53px;
+  bottom: 4%;
+  color: #e4e4e4;
+}

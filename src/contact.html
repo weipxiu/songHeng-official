@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="keywords" content="">
+    <meta name="description" content="">
+    <title>联系我们</title>
+    <script type="text/javascript" src="http://api.map.baidu.com/api?v=2.0&ak=cCAGaBt6wnZRUzzoGEnHGBEgtSh62xHX"></script>
+	<script type="text/javascript" src="http://api.map.baidu.com/library/SearchInfoWindow/1.5/src/SearchInfoWindow_min.js"></script>
+	<link rel="stylesheet" href="http://api.map.baidu.com/library/SearchInfoWindow/1.5/src/SearchInfoWindow_min.css" />
+    <link rel="stylesheet" href="./css/common/base.min.css">
+    <link rel="stylesheet" href="./css/page/contact.min.css">
+</head>
+
+<body>
+    <div class="swiper-header">
+        <div class="logo"><a href="./index.html"><img class="img" src="./img/common/logo2.png" alt=""></a></div>
+        <div class="tabs">
+            <ul class="list">
+                <li class="item">
+                    <a href="./about.html">关于我们</a>
+                    <ul>
+                        <li><a href="./about.html?index=1">公司简介</a><span></span></li>
+                        <li><a href="./about.html?index=2">发展历程</a><span></span></li>
+                        <li><a href="./about.html?index=3">管理团队</a><span></span></li>
+                        <li><a href="./about.html?index=4">公司动态</a><span></span></li>
+                    </ul>
+                </li>
+                <li class="item">
+                    <a href="javascript:;">产品服务</a>
+                    <ul>
+                        <li><a href="./product.html">产品概览</a><span></span></li>
+                        <li><a href="./technology.html">技术服务</a><span></span></li>
+                    </ul>
+                </li>
+                <li class="item"><a href="./join.html">加入我们</a>
+                    <ul>
+                        <li><a href="./join.html?index=1">社会招聘</a><span></span></li>
+                        <!-- <li><a href="./join.html?index=2">校园招聘</a><span></span></li> -->
+                    </ul>
+                </li>
+                <li class="item"><a href="./contact.html" class="tab-select">联系我们</a></li>
+            </ul>
+        </div>
+    </div>
+    <!-- Swiper -->
+    <div class="swiper-container swiper-no-swiping">
+        <div class="swiper-wrapper">
+            <div class="swiper-slide">
+                <div class="line-bottom"></div>
+                <div class="section">
+                    <div class="section-all">
+                        <ul class="page-container">
+                            <li class="contact-item">
+                                <h4 class="item-tit">广告投放</h4>
+                                <p class="item-info">DSP业务：dftoutiao1@021.com</p>
+                                <p class="item-info">效果广告：lianmengxiaoshou@021.com</p>
+                                <p class="item-info">品牌广告：branding@em.eastday.com</p>
+                            </li>
+                            <li class="contact-item">
+                                <h4 class="item-tit">商务合作</h4>
+                                <p class="item-info">商务合作：guxiaojuan@021.com</p>
+                                <p class="item-info">战略合作：wuyan@021.com</p>
+                            </li>
+                            <li class="contact-item">
+                                <h4 class="item-tit">媒体垂询</h4>
+                                <p class="item-info">PR@021.com</p>
+                            </li>
+                            <li class="contact-item">
+                                <h4 class="item-tit">上海总部</h4>
+                                <p class="item-info">地址：上海市浦东新区盛夏路666号e栋4楼</p>
+                                <p class="item-info">电话：021-68620255</p>
+                            </li>
+                        </ul>
+                        <div class="page-img"><img src="./img/common/contact_pic.png" alt=""></div>
+                    </div>
+                    <!-- <img src="./img/common/contact_map.png" alt="" class="map"> -->
+                    <!-- 引入百度地图 -->
+                    <div id="allmap" class="map">
+                    </div>
+                    <div id="result">
+                        <!-- <input type="button" value="默认样式" onclick="searchInfoWindow.open(marker);"/>
+                            <input type="button" value="样式1" onclick="openInfoWindow1()"/>
+                            <input type="button" value="样式2" onclick="openInfoWindow2()"/>
+                            <input type="button" value="样式3" onclick="openInfoWindow3()"/> -->
+                    </div>
+                </div>
+                <div class="footer">2014-2018上海嵩恒网络科技股份有限公司ICP12043666号-18</div>
+            </div>
+        </div>
+    </div>
+    <script src="./js/common/base.min.js"></script>
+    <script src="./js/page/contact.min.js"></script>
+    <script type="text/javascript">
+        // 百度地图API功能
+        var map = new BMap.Map('allmap');
+        var poi = new BMap.Point(121.635274,31.210662);
+        map.centerAndZoom(poi, 16);
+        map.enableScrollWheelZoom();
+
+        var content = '<div style="margin:0;line-height:20px;padding:2px;">' +
+            '<img src="./img/common/briefIntroduction.jpg" alt="" style="float:right;zoom:1;overflow:hidden;width:100px;height:100px;margin-left:3px;"/>' +
+            '地址：上海市浦东新区盛夏路666号E栋4楼<br/>电话：(021)68620255<br/>简介：公司主营互联网产品技术开发及运营，热诚欢迎各界朋友前来参观、考察、洽谈业务。' +
+            '</div>';
+
+        //创建检索信息窗口对象
+        var searchInfoWindow = null;
+        searchInfoWindow = new BMapLib.SearchInfoWindow(map, content, {
+            title: "嵩恒网络", //标题
+            width: 345, //宽度
+            height: 105, //高度
+            panel: "panel", //检索结果面板
+            enableAutoPan: true, //自动平移
+            searchTypes: [
+                BMAPLIB_TAB_SEARCH, //周边检索
+                BMAPLIB_TAB_TO_HERE, //到这里去
+                BMAPLIB_TAB_FROM_HERE //从这里出发
+            ]
+        });
+        var marker = new BMap.Marker(poi); //创建marker对象
+        marker.enableDragging(); //marker可拖拽
+        marker.addEventListener("mouseover", function (e) {
+            searchInfoWindow.open(marker); //显示那个信息窗口
+        })
+        map.addOverlay(marker); //在地图中添加marker
+        //样式1
+        var searchInfoWindow1 = new BMapLib.SearchInfoWindow(map, "信息框1内容", {
+            title: "信息框1", //标题
+            panel: "panel", //检索结果面板
+            enableAutoPan: true, //自动平移
+            searchTypes: [
+                BMAPLIB_TAB_FROM_HERE, //从这里出发
+                BMAPLIB_TAB_SEARCH //周边检索
+            ]
+        });
+
+        function openInfoWindow1() {
+            searchInfoWindow1.open(new BMap.Point(121.635341,31.211518));
+        }
+        //样式2
+        var searchInfoWindow2 = new BMapLib.SearchInfoWindow(map, "信息框2内容", {
+            title: "信息框2", //标题
+            panel: "panel", //检索结果面板
+            enableAutoPan: true, //自动平移
+            searchTypes: [
+                BMAPLIB_TAB_SEARCH //周边检索
+            ]
+        });
+
+        function openInfoWindow2() {
+            searchInfoWindow2.open(new BMap.Point(121.635341,31.211518));
+        }
+        //样式3
+        var searchInfoWindow3 = new BMapLib.SearchInfoWindow(map, "信息框3内容", {
+            title: "信息框3", //标题
+            width: 290, //宽度
+            height: 40, //高度
+            panel: "panel", //检索结果面板
+            enableAutoPan: true, //自动平移
+            searchTypes: []
+        });
+
+        function openInfoWindow3() {
+            searchInfoWindow3.open(new BMap.Point(121.635341,31.211518));
+        }
+    </script>
+</body>
+
+</html>

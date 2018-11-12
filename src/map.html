@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="keywords" content="">
+    <meta name="description" content="">
+    <title>嵩恒首页</title>
+    <style>
+      html{height:100%}  
+      body{height:100%;margin:0px;padding:0px}  
+      #container{height:100%}  
+    </style>
+    <link rel="stylesheet" href="./css/common/base.min.css">
+    <script type="text/javascript" src="http://api.map.baidu.com/api?v=2.0&ak=2qS5YYIylE65XB389zCvxf8NMXfPIUvi"></script>
+</head>
+
+<body>
+    <div id="container"></div>
+    <script src="./js/common/base.min.js"></script>
+    <script>
+      window.onload=function() {
+        var map = new BMap.Map("container");          // 创建地图实例  
+        var point = new BMap.Point(121.640985,31.212521);  // 创建点坐标  
+        map.centerAndZoom(point, 17); 
+        var marker = new BMap.Marker(point);  // 创建标注
+        map.addOverlay(marker);               // 将标注添加到地图中
+        marker.setAnimation(BMAP_ANIMATION_BOUNCE); //跳动的动画
+        map.enableScrollWheelZoom();   //启用滚轮放大缩小，默认禁用
+        map.enableContinuousZoom();  
+        var opts = {
+          width : 200,     // 信息窗口宽度
+          height: 70,     // 信息窗口高度
+          title : "上海嵩恒网络科技有限公司" , // 信息窗口标题
+          enableMessage:true,//设置允许信息窗发送短息
+          message:"亲耐滴，晚上一起吃个饭吧？戳下面的链接看下地址喔~"
+        }
+        var infoWindow = new BMap.InfoWindow("地址：上海市浦东新区银冬路491号集创公园2幢", opts);  // 创建信息窗口对象 
+        map.openInfoWindow(infoWindow,point); //开启信息窗口
+        marker.addEventListener("click", function(){          
+          map.openInfoWindow(infoWindow,point); //开启信息窗口
+        });
+      }
+    </script>
+</body>
+
+</html>

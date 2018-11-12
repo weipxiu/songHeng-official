@@ -1,0 +1,255 @@
+.swiper-container {
+	width: 100%;
+	height: 100%;
+	margin-left: auto;
+	margin-right: auto;
+}
+
+.swiper-slide {
+	position: relative;
+	text-align: center;
+	font-size: 12px;
+	color: #fff;
+	background: #fff;
+	line-height: 1.5;
+	.btn-link {
+		position: absolute;
+		left: 50%;
+		bottom: 7%;
+		z-index: 9;
+		width: 324px;
+		height: 60px;
+		margin-left: -162px;
+		line-height: 60px;
+		font-size: 24px;
+		color: #fff;
+		text-decoration: none;
+		border-radius: 80px;
+		background-color: #f03737;
+		-webkit-tap-highlight-color: transparent;
+		display: flex;
+		flex-direction: row;
+		justify-content: center;
+		align-items: center;
+		&:hover{
+			background: #ac2727;
+			text-decoration: none;
+		}
+		p{
+			width: 60%;
+			height: 33px;
+			line-height: 28px;
+		}
+		.arrow {
+			width: 14px;
+			height: 14px;
+			margin: 14px 0 0px 10px;
+			border-top: 1px solid #fff;
+			border-left: 1px solid #fff;
+			transform: translate3d(0, -50%, 0) rotateZ(135deg);
+			-webkit-transform: translate3d(0, -50%, 0) rotateZ(135deg);
+		}
+	}
+	&:first-child {
+		background: url(../../img/common/join/join_bg1.png) no-repeat top center;
+		background-size: cover;
+		.title {
+			margin-top: 300px;
+			font-size: 60px;
+			letter-spacing: 6px;
+			font-weight: bold;
+		}
+		.tit-msg {
+			margin-top: 22px;
+			font-size: 34px;
+			font-weight: 300;
+			text-transform: uppercase;
+		}
+		.line {
+			display: inline-block;
+			width: 50px;
+			height: 2px;
+			margin: 50px auto 0;
+			background-color: #f61b1b;
+		}
+		.slogan {
+			margin-top: 40px;
+			font-size: 36px;
+			letter-spacing: 6px;
+			font-weight: 300;
+		}
+	}
+	&:nth-child(2) {
+		background: url(../../img/common/join/join_bg2.png) no-repeat top center;
+		background-size: cover;
+		.word-png-2 {
+			display: block;
+			width: 546px;
+			height: 528px;
+			position: absolute;
+			top: 58%;
+			left: 50%;
+			margin:-20% 0 0 -273px;
+		}
+	}
+	&:nth-child(3) {
+		background: url(../../img/common/join/join_bg3.png) no-repeat top center;
+		background-size: cover;
+		.word-png-3 {
+			display: block;
+			width: 780px;
+			height: 357px;
+			position: absolute;
+			top: 65%;
+			left: 50%;
+			margin:-20% 0 0 -390px;
+		}
+	}
+}
+
+@keyframes first_dmove {
+	0% {
+		margin-top: 0px;
+	}
+	100% {
+		opacity: 0;
+		margin-top: 20px;
+	}
+}
+
+@media (min-width:1366px) and (max-width:1919px) {
+	.swiper-slide {
+		.btn-link {
+			width: 226px;
+			height: 42px;
+			margin-left: -113px;
+			line-height: 42px;
+			font-size: 18px;
+			border-radius: 60px;
+			p{
+				width: 64%;
+				height: 24px;
+				line-height: 22px;
+			}
+			.arrow {
+				width: 12px;
+				height: 12px;
+				margin: 0 0 -13px 8px;
+			}
+			&:hover{
+				background: #ac2727;
+				text-decoration: none;
+			}
+		}
+		&:first-child {
+			.title {
+				margin-top: 260px;
+				font-size: 42px;
+			}
+			.tit-msg {
+				margin-top: 20px;
+				font-size: 22px;
+				text-transform: uppercase;
+			}
+			.line {
+				display: inline-block;
+				width: 35px;
+				height: 2px;
+				margin: 35px auto 0;
+				background-color: #f61b1b;
+			}
+			.slogan {
+				margin-top: 35px;
+				font-size: 26px;
+				letter-spacing: 6px;
+			}
+		}
+		&:nth-child(2) {
+			.word-png-2 {
+				width: 382px;
+				height: 370px;
+				position: absolute;
+				top: 58%;
+				left: 50%;
+				margin:-20% 0 0 -191px;
+			}
+		}
+		&:nth-child(3) {
+			.word-png-3 {
+				width: 546px;
+				height: 250px;
+				position: absolute;
+				top: 58%;
+				left: 50%;
+				margin:-20% 0 0 -273px;
+			}
+		}
+	}
+}
+
+@media (max-width:1365px) {
+	.swiper-slide {
+		.btn-link {
+			width: 226px;
+			height: 42px;
+			margin-left: -113px;
+			line-height: 42px;
+			font-size: 18px;
+			border-radius: 60px;
+			.arrow {
+				width: 12px;
+				height: 12px;
+				margin: 0 0 -13px 8px;
+			}
+			p{
+				width: 64%;
+				height: 24px;
+				line-height: 22px;
+			}
+		}
+		&:first-child {
+			.title {
+				margin-top: 244px;
+				font-size: 36px;
+			}
+			.tit-msg {
+				margin-top: 14px;
+				font-size: 21px;
+			}
+			.line{
+				margin-top: 33px;
+			}
+			.slogan {
+				margin-top: 33px;
+				font-size: 22px;
+				letter-spacing: 6px;
+			}
+		}
+		&:nth-child(2) {
+			.word-png-2 {
+				width: 382px;
+				height: 370px;
+				position: absolute;
+				top: 58%;
+				left: 50%;
+				margin:-20% 0 0 -191px;
+			}
+		}
+		&:nth-child(3) {
+			.word-png-3 {
+				width: 546px;
+				height: 250px;
+				position: absolute;
+				top: 58%;
+				left: 50%;
+				margin:-20% 0 0 -273px;
+			}
+		}
+	}
+}
+.footer{
+  position: absolute;
+  left: 53px;
+	bottom: 4%;
+  display: block!important;
+}
